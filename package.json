@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "name": "full-stack-e-commerce-webapp",
+  "version": "1.0.0",
+  "description": "First full stack web application. A functional replica of web site where users can buy electronic goods",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Segadunk/FULL-STACK-E-commerce-WEBAPP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Segadunk/FULL-STACK-E-commerce-WEBAPP/issues"
+  },
+  "homepage": "https://github.com/Segadunk/FULL-STACK-E-commerce-WEBAPP#readme"
+}
