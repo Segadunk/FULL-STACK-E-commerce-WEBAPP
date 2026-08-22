@@ -1,10 +1,9 @@
 import express from "express";
 import fs from "fs/promises";
-import dotenv from "dotenv"
+
+import config from "./config/config.js";
 
 const app=express(); //server init
-
-dotenv.config() //in env files never space 
 
 app.get("/", (req,res)=>{
     res.send("<h1>Home page</h1>")
@@ -12,7 +11,7 @@ app.get("/", (req,res)=>{
 app.get("/about",(req,res)=>{
     res.send("<h1>About Page</h1> </br>Here are all the info about contacting the devs of the page")
 })
-app.listen(process.env.PORT, ()=>{
+app.listen(config.port, ()=>{
     console.log(`Server running at port 5000`)
 });// listen is required so that when we go to a particular site, localhost:5000 in this case, we listen where the user wanna go 
 
