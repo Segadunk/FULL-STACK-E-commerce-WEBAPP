@@ -29,7 +29,7 @@ app.get("/users/:userId", async (req,res)=>{
 
 //suppose we want products page
 app.get("/products", async(req, res)=>{
-    const products = await fs.readFile("data/products.json","utf-8");
+    const products = await fs.readFile("data/products.json","utf-8");  
 
     res.json(JSON.parse(products));
 })
