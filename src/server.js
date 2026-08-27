@@ -1,11 +1,18 @@
 import express from "express";
 import fs from "fs/promises";
+import mongoose from "mongoose";
+
+
 
 import config from "./config/config.js";
 
 import usersRoute from "./routes/user.routes.js"
 
 const app=express(); //server init
+
+mongoose
+    .connect('mongodb://localhost:27017/test')
+    .then(()=> console.log(`Database connected successfully`));
 
 app.get("/", (req,res)=>{
     res.send("<h1>Home page</h1>")
