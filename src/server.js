@@ -4,6 +4,7 @@ import fs from "fs/promises";
 import connectDB from "./config/database.configuartion.js";
 import config from "./config/config.js";
 import usersRoute from "./routes/user.routes.js"
+import productsRoute from "./routes/product.routes.js"
 
 const app=express(); //server init
 
@@ -24,6 +25,7 @@ app.get("/products", async(req, res)=>{
 })
 
 app.use("/", usersRoute)
+app.use("/",productsRoute)
 
 app.listen(config.port, ()=>{
     console.log(`Server running at port 5000`)
