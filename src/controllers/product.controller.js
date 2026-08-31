@@ -1,9 +1,9 @@
 import productServices from "../services/product.services.js";
 
-const createProduct= (req,res)=>{
-    productServices.createProduct()
+const createProduct= async (req,res)=>{
+    const createdProduct = await productServices.createProduct();
 
-    res.send(`Product Created`)
+    res.json(createdProduct)
 }
 
 export default {createProduct}
