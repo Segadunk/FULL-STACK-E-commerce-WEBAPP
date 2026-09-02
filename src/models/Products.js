@@ -15,7 +15,6 @@ const productSchema = new mongoose.Schema({
   },
   description:{
     type: String,
-
   },
   imageUrls: [String], //box  bracket for arrays or a number of it 
 })
