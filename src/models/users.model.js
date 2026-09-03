@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 
-const userModel = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     name:{
         type:String,
-        minLenght:[2,"Username cannot be shorter than two characters"],
+        minLength:[2,"Username cannot be shorter than two characters"],
     },
     age:{
         type:Number,
@@ -11,4 +11,4 @@ const userModel = new mongoose.Schema({
     }, 
 })
 
-export default {userModel}
+export default mongoose.model("User",userSchema)
