@@ -1,4 +1,5 @@
 import fs from "fs/promises";
+import userModels from "../models/users.model.js";
 
 const getUsers= async()=>{
 const users= await fs.readFile("data/users.json","utf-8"); //even tho we are inside src and the users are in separate directory one step above, we use this because we run command from the parent file where the package.json is
@@ -14,4 +15,10 @@ const getUsersbyId= async(id)=>{
     return user;
 }
 
-export default {getUsersbyId, getUsers};
+const createUser= async () => {
+     return await userModels.create({
+        name:"Hari",
+        age:30,
+    } //the return is buggy but idk how
+)}
+export default {getUsersbyId, getUsers,createUser}
